@@ -1,7 +1,7 @@
 #for j in {1..24}; do
-#/net/snowwhite/home/sarahgag/pheweb-rg-test/sumher/ldak5.linux --cut-genes ../test_anntoations/ann$j --bfile /net/sardinia/sarahgag/LDSC/1000G_EUR_Phase3_plink/1000G.EUR.QC.$j --genefile ../test_annotations/ann$j.genefile --ignore-weights YES
-#mv ../test-annotations/ann$j/genes.predictors.used ../test_annotations/ann_snps.$j
-#done
+#/net/snowwhite/home/sarahgag/pheweb-rg-test/sumher/ldak5.linux --cut-genes test_annotations/ann$j --bfile /net/sardinia/sarahgag/LDSC/1000G_EUR_Phase3_plink/1000G.EUR.QC --genefile test_annotations/ann$j.genefile --ignore-weights YES
+#mv test-annotations/ann$j/genes.predictors.used test_annotations/ann_snps.$j
+done
 #The lists will be saved in ann_snps.1, ann_snps.2, ..., ann_snps.24
 
 i=$1
