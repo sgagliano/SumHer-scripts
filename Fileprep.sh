@@ -16,6 +16,6 @@ awk < ${i}.txt '( ($2=="A"&&$3=="C") || ($2=="A"&&$3=="G") || ($2=="C"&&$3=="A")
 #To identify predictors inside the MHC, and those which individually explain >1% of phenotypic variance, or are in LD with predictor that is
 #i.e. `$5 / ($5 + $6) > 1 / 100` =>  `$5 * 100 > $5 + $6`  => `$5 * 99 > $6` => `$5 > $6 / 99`
 awk < ${i}.txt '(NR>1 && $5>$6/99){print $1}' > ${i}.big
-#if big is empty, omit next two lines and cp big to exclude
+#if big is empty, omit next line, cp big to out, and run last line
 ../../../sumher/ldak5.linux --remove-tags ${i} --bfile /net/sardinia/sarahgag/LDSC/1000G_EUR_Phase3_plink/1000G.EUR.QC --top-preds ${i}.big --window-cm 1 --min-cor .1
 cat ../mhc.snps ${i}.out > ${i}.exclude
