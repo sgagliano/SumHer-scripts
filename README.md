@@ -10,4 +10,4 @@ Pipeline to estimate ```heritability enrichment``` for overlapping "annotations"
 5. Partition.sh
 6. GetResults.sh
 
-For massively-parallel ```genetic correlations``` using SumHer for binary traits see https://github.com/statgen/pheweb-rg-pipeline
+For massively-parallel estimation of ```genetic correlations``` using SumHer for binary traits see https://github.com/statgen/pheweb-rg-pipeline
