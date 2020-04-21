@@ -6,7 +6,8 @@ mkdir ${k}
 cd ${k}
 
 #create tagging file
-sumher/ldak5.linux --calc-tagging sumanns --bfile 1000G_EUR_Phase3_plink/1000G.EUR.QC --weights ../sumsect_${i}/weights.short --power -0.25 --extract ../${i}.nonamb --exclude ../${i}.exclude --window-cm 1 --annotation-number 52 --annotation-prefix ../../test_annotations/${k}/ann_snps.
+#--annotation-number 53; replace 53 with whatever number of files you have correpsonding to ../../test_annotations/${k}/ann_snps.* ((--annotaiton-prefix)
+sumher/ldak5.linux --calc-tagging sumanns --bfile 1000G_EUR_Phase3_plink/1000G.EUR.QC --weights ../sumsect_${i}/weights.short --power -0.25 --extract ../${i}.nonamb --exclude ../${i}.exclude --window-cm 1 --annotation-number 53 --annotation-prefix ../../test_annotations/${k}/ann_snps.
 #can only use --background YES when specifying "partitions"
 
 #regress test statistics onto tagging file
