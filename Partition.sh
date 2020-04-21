@@ -6,8 +6,8 @@ mkdir ${k}
 cd ${k}
 
 #create tagging file
-/net/snowwhite/home/sarahgag/pheweb-rg-test/sumher/ldak5.linux --calc-tagging sumanns --bfile /net/sardinia/sarahgag/LDSC/1000G_EUR_Phase3_plink/1000G.EUR.QC --weights ../sumsect_${i}/weights.short --power -0.25 --extract ../${i}.nonamb --exclude ../${i}.exclude --window-cm 1 --annotation-number 52 --annotation-prefix ../../test_annotations/${k}/ann_snps.
+sumher/ldak5.linux --calc-tagging sumanns --bfile 1000G_EUR_Phase3_plink/1000G.EUR.QC --weights ../sumsect_${i}/weights.short --power -0.25 --extract ../${i}.nonamb --exclude ../${i}.exclude --window-cm 1 --annotation-number 52 --annotation-prefix ../../test_annotations/${k}/ann_snps.
 #can only use --background YES when specifying "partitions"
 
 #regress test statistics onto tagging file
-/net/snowwhite/home/sarahgag/pheweb-rg-test/sumher/ldak5.linux --sum-hers sumanns --tagfile sumanns.tagging --summary ../${i}.txt --check-sums NO
+sumher/ldak5.linux --sum-hers sumanns --tagfile sumanns.tagging --summary ../${i}.txt --check-sums NO
