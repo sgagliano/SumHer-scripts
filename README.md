@@ -32,4 +32,4 @@ main_directory/<br/>
     --> --> 1000G.EUR.QC.{bed,bim,fam} #chr1-22 merged<br/>
     --> --> 1000G.EUR.QC.{1..22}.{bed,bim,fam}<br/>
   --> results/<br/>
-  --> --> annotation.names/<br/> #one column file listing ordered annotation names corresponding to genelist1, genelist2 ..., one per line
+  --> --> annotation.names/<br/> #1 column listing ordered annotation names corresponding to genelist1, genelist2 ..., 1 per line
