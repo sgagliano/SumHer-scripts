@@ -9,6 +9,7 @@ Pipeline to estimate ```heritability enrichment``` for overlapping "annotations"
 4. PartitionPrep.sh
 5. Partition.sh
 6. GetResults.sh
+7. Visualize.R
 
 For massively-parallel estimation of ```genetic correlations``` using SumHer for binary traits see https://github.com/statgen/pheweb-rg-pipeline
 
@@ -20,6 +21,7 @@ main_directory/<br/>
   --> PartitionPrep.sh<br/>
   --> Partition.sh<br/>
   --> GetResults.sh<br/>
+  --> Visualize.R<br/>
   --> input-{i}/ #i is trait name<br/>
   --> test_annotations/<br/>
     --> genelist{1..k}/ #one directory for each test<br/>
@@ -33,3 +35,4 @@ main_directory/<br/>
     --> --> 1000G.EUR.QC.{1..22}.{bed,bim,fam}<br/>
   --> results/<br/>
   --> --> annotation.names #1 column listing ordered annotation names corresponding to genelist1, genelist2 ..., 1 per line
+  --> visualize/
