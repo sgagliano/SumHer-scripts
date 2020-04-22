@@ -24,9 +24,9 @@ for(i in 1:length(file_paths)){
     file <- read_csv(file_paths[[i]]) %>% 
       dplyr::mutate(GWAS = case_when(GWAS == "PD" ~ "PD2019_ex23andMe",
                                      GWAS == "AAO" ~ "PD2018_AOO",
-				                             GWAS == "AD" ~ "AD2019",
+				     GWAS == "AD" ~ "AD2019",
                                      TRUE ~ GWAS)) %>% 
-      tidyr::separate(Annot, into = c("comparison", "cell_type"), sep = ":")    
+      tidyr::separate(Annot, into = c("comparison", "cell_type"), sep = ":") #first column (Annot) is in format comparison:celltype    
     
     enrich <- file %>% 
       dplyr::select(GWAS, comparison, cell_type, Component, Share, Share_SD = SD, Expected, Enrichment, Enrichment_SD = SD_1)
@@ -77,6 +77,9 @@ plot_function <- function(df, x, y, fill, sd){
 }
 
 ##PLOT RESULTS FROM .enrich OUTPUT
+#six "comparisons" in this dataset: first six rows in comparison (and then repeats for the cell_types):
+#c("Control_vs_PD", "Control_vs_PDD", "Control_vs_DLB", "PD_vs_PDD", "PD_vs_DLB", "PDD_vs_DLB")  
+#use in plotting function below; modify as needed for other datasets
 png('visualize/enrich.png', width=8, height=11, unit="in", res=1000)
 a <- 
   results$enrich %>% 
