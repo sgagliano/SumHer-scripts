@@ -77,7 +77,7 @@ plot_function <- function(df, x, y, fill, sd){
 }
 
 ##PLOT RESULTS FROM .enrich OUTPUT
-#six "comparisons" in this dataset: first six rows in comparison (and then repeats for the cell_types):
+#order the "comparisons" in the dataset like so (e.g. each comparison has several cell_types):
 #c("Control_vs_PD", "Control_vs_PDD", "Control_vs_DLB", "PD_vs_PDD", "PD_vs_DLB", "PDD_vs_DLB")  
 #use in plotting function below; modify as needed for other datasets
 png('visualize/enrich.png', width=8, height=11, unit="in", res=1000)
